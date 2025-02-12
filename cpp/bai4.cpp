@@ -11,7 +11,7 @@ long long maxFirst = 0, maxSecond = 0;
 // This code has the time complexity of O(m * n) = 10^8
 int main(){
     freopen("input.inp", "r", stdin);
-    freopen("output.out", "w", stdout);
+    // freopen("output.out", "w", stdout);
 
     cin >> m >> n;
     for(int i = 0; i < m; i++){
@@ -23,7 +23,7 @@ int main(){
     for (int i = 0; i < m; i++){
         long long maxRow = 0;
         // find max in row i
-        for (int j = 0; j < m; j++){
+        for (int j = 0; j < n; j++){
             if (a[i][j] > maxRow){
                 maxRow = a[i][j];
             }
@@ -38,7 +38,7 @@ int main(){
         }
     }
 
-    // cout << maxFirst << " " << maxSecond << endl;
+    cout << maxFirst << " " << maxSecond << endl;
 
     cout << maxFirst + maxSecond << endl;
 
